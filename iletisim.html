@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim - Enes Fıral</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="container header-content">
+        <a href="index.html" class="logo">Enes Fıral</a>
+        <div class="header-right">
+            <nav class="main-nav">
+              <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="projeler.html">Projeler</a></li>
+                <li><a href="makaleler.html">Makaleler</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="iletisim.html" class="active">İletişim</a></li>
+              </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle theme">
+              <i class="fa-solid fa-sun"></i>
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="hamburger-menu" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <main>
+        <section class="page-content">
+          <h1 class="page-title">İletişim</h1>
+          <p>
+            Benimle iletişime geçmek için aşağıdaki formu kullanabilir ya da sosyal medya hesaplarımdan ulaşabilirsiniz.
+          </p>
+          
+          <div class="contact-layout">
+            <div class="contact-details">
+              <div class="contact-info-block">
+                <h3>İletişim Bilgileri</h3>
+                <div class="contact-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div class="contact-item-text">
+                    <h4>Konum</h4>
+                    <p>Kocaeli, Türkiye</p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <div class="contact-item-text">
+                    <h4>Email</h4>
+                    <p>enesfiral@gmail.com</p>
+                  </div>
+                </div>
+                 <div class="contact-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <div class="contact-item-text">
+                    <h4>Telefon</h4>
+                    <p>05376395515</p>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-info-block">
+                <h3>Sosyal Medya</h3>
+                <div class="contact-item">
+                  
+                </div>
+                <div class="contact-item">
+                  <i class="fa-brands fa-github"></i>
+                  <div class="contact-item-text">
+                    <a href= "https://github.com/enesfiral9"target="_blank" rel="noopener noreferrer"><h4>@enesfiral9</h4></a>
+                    <p>Kodlarım ve projelerim</p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                  <div class="contact-item-text">
+                    <a href="https://www.linkedin.com/in/enes-firal-462aa41b5/" target="_blank" rel="noopener noreferrer"><h4>Enes Fıral</h4></a>
+                    
+                    <p>Profesyonel ağım</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form-container">
+              <h3>Mesaj Gönderin</h3>
+              <form class="contact-form" action="https://formspree.io/f/xyzdldbk" method="POST">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="name">Adınız Soyadınız *</label>
+                    <input type="text" id="name" name="name" placeholder="Adınızı girin" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="email@ornek.com" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Telefon Numaranız *</label>
+                    <input type="phone" id="phone" name="phone" placeholder=""  required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="subject">Konu *</label>
+                  <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Konu seçin</option>
+                    <option value="is-birligi">İş Birliği</option>
+                    <option value="proje-teklifi">Proje Teklifi</option>
+                    <option value="danismanlik">Danışmanlık</option>
+                    <option value="diger">Diğer</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Mesajınız *</label>
+                  <textarea id="message" name="message" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                </div>
+                <input type="hidden" name="_redirect" value="https://google.com/">
+                <button type="submit" class="btn btn-primary btn-submit" >
+                  <i class="fa-solid fa-paper-plane"></i> Mesajı Gönder
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="cta-box">
+            <h3>İş Birliği ve Projeler</h3>
+            <p>Yeni projeler, iş birliği fırsatları veya danışmanlık hizmetleri için benimle iletişime geçin. Genellikle 24 saat içinde geri dönüş yapıyorum.</p>
+          </div>
+
+        </section>
+      </main>
+    </div>
+
+    <footer class="app-footer">
+      <div class="footer-columns">
+        <div class="footer-column about">
+          <h4>Enes Fıral</h4>
+          <p>
+            Yazılım geliştirici ve teknoloji tutkunu. Modern web
+            teknolojileri ve kullanıcı deneyimi üzerine çalışmalar yapıyorum.
+          </p>
+        </div>
+        <div class="footer-column links">
+          <h4>Hızlı Erişim</h4>
+          <ul>
+            <li><a href="projeler.html">Projeler</a></li>
+            <li><a href="makaleler.html">Makaleler</a></li>
+            <li><a href="hakkimda.html">Hakkımda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+        <div class="footer-column social">
+          <h4>Sosyal Medya</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Enes Fıral. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <script type="module">
+      const themeToggle = document.querySelector('.theme-toggle');
+      const body = document.body;
+
+      const setTheme = (theme) => {
+        if (theme === 'dark') {
+          body.classList.add('dark-mode');
+        } else {
+          body.classList.remove('dark-mode');
+        }
+        localStorage.setItem('theme', theme);
+      };
+
+      themeToggle.addEventListener('click', () => {
+        const isDarkMode = body.classList.contains('dark-mode');
+        setTheme(isDarkMode ? 'light' : 'dark');
+      });
+
+      // On page load, set the theme based on saved preference or system setting
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else if (prefersDark) {
+        setTheme('dark');
+      } else {
+        setTheme('light'); // default to light
+      }
+
+      // Sticky header on scroll
+      const header = document.querySelector('.app-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+      
+      // Hamburger menu toggle
+      const hamburger = document.querySelector('.hamburger-menu');
+      hamburger.addEventListener('click', () => {
+        body.classList.toggle('mobile-nav-open');
+      });
+    </script>
+  </body>
+</html>
