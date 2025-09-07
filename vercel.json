@@ -8,24 +8,8 @@
   ],
   "routes": [
     {
-      "src": "/index.html",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/projeler.html",
-      "dest": "/projeler.html"
-    },
-    {
-      "src": "/makaleler.html",
-      "dest": "/makaleler.html"
-    },
-    {
-      "src": "/hakkimda.html",
-      "dest": "/hakkimda.html"
-    },
-    {
-      "src": "/iletisim.html",
-      "dest": "/iletisim.html"
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
