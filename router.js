@@ -1,28 +1,27 @@
-// routes mapping
 const routes = {
-  '/': '<h1>Ana Sayfa</h1><p>Hoşgeldiniz!</p>',
-  '/iletisim': '<h1>İletişim</h1><p>Buradan bize ulaşabilirsiniz.</p>',
-  '/hakkimizda': '<h1>Hakkımızda</h1><p>Biz kimiz ve ne yapıyoruz?</p>'
+  '/': '<h1>Ana Sayfa</h1>',
+  '/projeler': '<h1>Projeler</h1>',
+  '/makaleler': '<h1>Makaleler</h1>',
+  '/hakkimda': '<h1>Hakkımda</h1>',
+  '/iletisim': '<h1>İletişim</h1>'
 };
 
-// render function
 function render(path) {
   const app = document.getElementById('app');
-  app.innerHTML = routes[path] || '<h1>404</h1><p>Sayfa bulunamadı.</p>';
+  app.innerHTML = routes[path] || '<h1>404</h1>';
 }
 
-// link SPA yönlendirmesi
 document.querySelectorAll('a[data-link]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
-    const path = new URL(a.href).pathname;
-    window.history.pushState({}, '', path);
+    const path = a.getAttribute('href').replace('#', '') || '/';
+    window.location.hash = path;
     render(path);
   });
 });
 
-// back/forward tuşları
-window.addEventListener('popstate', () => render(window.location.pathname));
+window.addEventListener('hashchange', () => {
+  render(window.location.hash.replace('#', '') || '/');
+});
 
-// initial render
-render(window.location.pathname);
+render(window.location.hash.replace('#', '') || '/');
