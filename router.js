@@ -1,17 +1,17 @@
-// router.js
+// routes mapping
 const routes = {
   '/': '<h1>Ana Sayfa</h1><p>Hoşgeldiniz!</p>',
   '/iletisim': '<h1>İletişim</h1><p>Buradan bize ulaşabilirsiniz.</p>',
   '/hakkimizda': '<h1>Hakkımızda</h1><p>Biz kimiz ve ne yapıyoruz?</p>'
 };
 
-// Sayfa render fonksiyonu
+// render function
 function render(path) {
   const app = document.getElementById('app');
   app.innerHTML = routes[path] || '<h1>404</h1><p>Sayfa bulunamadı.</p>';
 }
 
-// Link tıklamalarını SPA mantığıyla yönlendir
+// link SPA yönlendirmesi
 document.querySelectorAll('a[data-link]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
@@ -21,8 +21,8 @@ document.querySelectorAll('a[data-link]').forEach(a => {
   });
 });
 
-// Browser back/forward tuşlarını dinle
+// back/forward tuşları
 window.addEventListener('popstate', () => render(window.location.pathname));
 
-// Sayfa yüklendiğinde initial render
+// initial render
 render(window.location.pathname);
